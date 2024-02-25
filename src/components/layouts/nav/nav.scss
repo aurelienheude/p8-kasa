@@ -1,0 +1,26 @@
+@use "../../../styles/variables" as *;
+
+nav{
+    grid-row: 1;
+    grid-column: 2/3;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 45px;
+    .logo{
+        max-height: 68px;
+        width: auto;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+
+        gap: 57px;
+
+        li a{
+            color: $primaryColor;
+        }
+    }
+}

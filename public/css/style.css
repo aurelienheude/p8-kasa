@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+html, body, ul, p, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, .text, p, span, a {
+  font-family: Montserrat;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 68px;
+  letter-spacing: 0em;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: 0em;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1240px 1fr;
+  grid-template-rows: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: flex;
+}
+
+header {
+  grid-row: 2;
+  grid-template-columns: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 96, 96);
+}
+
+/*# sourceMappingURL=style.css.map */
