@@ -8,18 +8,21 @@ nav{
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 45px;
+    padding-top: 20px;
+
     .logo{
-        max-height: 68px;
-        width: auto;
+        max-height: 46px;
+        max-width: auto;
     }
+
     ul{
         display: flex;
         flex-direction: row;
 
-        gap: 57px;
+        gap: 26px;
 
-        li a{
+        li .navlink{
+            text-transform: uppercase;
             color: $primaryColor;
         }
     }

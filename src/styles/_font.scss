@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-h1, h2, .text, p, span, a{
+h1, h2, .text, p, span, a, .tagText, .errorTitle{
     font-family: Montserrat;
 }
 
@@ -18,9 +18,44 @@ h2{
     letter-spacing: 0em;   
 }
 
-.text{
+.bannerImgTitle{
+    font-family: Montserrat;
     font-size: 24px;
     font-weight: 500;
-    line-height: 34px;
+    line-height: 24px;
     letter-spacing: 0em;
+    text-align: left;
+}
+
+.errorTitle{
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 137px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.navlink{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.tagText{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
 }

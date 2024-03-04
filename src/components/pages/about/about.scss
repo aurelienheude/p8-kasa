@@ -1,0 +1,45 @@
+@use "../../../styles/variables" as *;
+
+.aboutContent{
+    grid-column: 2/3;
+    grid-row: auto;
+
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 30px;
+
+    max-width: 100%;
+
+    .dropdownMenuSelection{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        box-sizing: border-box;
+        
+        height: 52px;
+        max-width: 1008px;
+        width: 100%;
+
+        padding: 0px 15px;
+
+        border-radius: 5px;
+        background: $primaryColor;
+        color: $white;
+
+        svg{
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+
+            &:hover{
+                transform: rotate(180deg);
+            }
+        }
+
+        
+    }
+}

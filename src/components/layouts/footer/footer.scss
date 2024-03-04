@@ -10,14 +10,19 @@ footer{
 
     flex-direction: column;
 
-    gap: 42px;
+    gap: 18px;
 
-    padding-bottom: 29px;
-    height: 189px;
+    padding-top: 66px;
+    padding-bottom: 58px;
 
     background: $black;
 
+    img{
+        width: auto;
+        height: 39px;
+    }
     p{
+        max-width: 145px;
         text-align: center;
         color: $white;
     }
