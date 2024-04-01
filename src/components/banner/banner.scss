@@ -1,6 +1,6 @@
-@use "../../styles/variables" as *;
+@use "../../styles/variables"as *;
 
-.bannerImg{
+.bannerImg {
     position: relative;
 
     grid-row: 2/3;
@@ -13,13 +13,17 @@
     height: 111px;
     width: 100%;
 
-    background: $black;
     border-radius: 10px;
-
     background-image: url("../../../public/image/WallpaperCliff.png");
     background-position: center;
 
-    &::after{
+    &__About{
+        background-image: url("../../../public/image/wallpaperMountain.png");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    &::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -29,7 +33,7 @@
         border-radius: 10px;
     }
 
-    .bannerImgTitle{
+    .bannerImgTitle {
         z-index: 2;
 
         padding-left: 16px;

@@ -1,12 +1,17 @@
-html, body, ul, p, h1, h2{
+html, body{
+    min-height: 100vh;
+}
+
+html,body,ul,p,h1,h2 {
     margin: 0;
     padding: 0;
 }
 
-ul, li{
+ul,
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }

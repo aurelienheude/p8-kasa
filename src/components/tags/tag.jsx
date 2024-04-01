@@ -1,5 +1,12 @@
-export const Tag = () => {
+export const Tag = ({ tags }) => {
     return (
-        <button className="tagText">tag-name</button>
+        <div className="apartmentTagList">
+            {
+                tags.map((tag, index) => 
+                (
+                    <p className="apartmentTag smallTextTag" key={index}>{tag}</p>
+                ))
+            }
+        </div>
     );
-}
+};

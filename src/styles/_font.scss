@@ -1,61 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-h1, h2, .text, p, span, a, .tagText, .errorTitle{
+* {
     font-family: Montserrat;
 }
 
-h1{
+h1 {
     font-size: 48px;
     font-weight: 500;
     line-height: 68px;
-    letter-spacing: 0em;
 }
 
-h2{
+h2 {
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0em;   
 }
 
-.bannerImgTitle{
-    font-family: Montserrat;
+.bannerImgTitle {
     font-size: 24px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: 0em;
+
     text-align: left;
 }
 
-.errorTitle{
-    font-size: 96px;
-    font-weight: 700;
-    line-height: 137px;
-    letter-spacing: 0em;
-    text-align: center;
-}
-
-.navlink{
-    font-family: Montserrat;
+.userProfile__name{
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
-    letter-spacing: 0em;
+    text-align: right;
 }
 
-.text{
+.apartmentLocation{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: left;
+}
+
+.apartmentTitle{
     font-size: 18px;
     font-weight: 500;
-    line-height: 26px;
-    letter-spacing: 0em;
+    line-height: 25.67px;
+    text-align: left;
+}
+
+.errorTitle {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 136px;
+
     text-align: center;
 }
 
-.tagText{
-    font-family: Montserrat;
+.navlink {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+}
+
+.errorLink {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+
+    text-align: center;
+}
+
+.smallText {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.tagText {
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    letter-spacing: 0em;
+
+    text-align: center;
+}
+
+.smallTextDropdown{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+}
+
+.smallTextTag{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
     text-align: center;
 }

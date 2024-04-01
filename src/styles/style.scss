@@ -1,10 +1,17 @@
 @use "base";
 @use "font";
+@use "grid";
 
-@use "../components/layouts/grid.scss";
-
-@use "../components/banner/banner.scss";
-@use "../components/pages/404/error.scss";
-@use "../components//pages/about/about.scss";
 @use "../components/layouts/nav/nav.scss";
+@use "../components/banner/banner.scss";
+@use "../components/dropdown/dropdown.scss";
+@use "../components/caroussel/caroussel.scss";
+@use "../components/tags/tag.scss";
+@use "../components/cards/cards.scss";
 @use "../components/layouts/footer/footer.scss";
+@use "../components/avatar/avatar.scss";
+
+@use "../pages/apartment/apartment.scss";
+@use "../pages/about/about.scss";
+@use "../pages/home/home.scss";
+@use "../pages//error/error.scss";

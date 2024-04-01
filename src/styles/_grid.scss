@@ -1,14 +1,18 @@
-#root{
+#app {
     display: grid;
     grid-template-columns: minmax(20px, 1fr) minmax(1px, 1240px) minmax(20px, 1fr);
+    row-gap: 20px;
+
     grid-template-rows: auto;
-    
 }
 
-.gridThumb{
+.gridThumb {
+    grid-column: 2/3;
+    grid-row: auto;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto;
-
-    row-gap: 50px;
+    
+    row-gap: 20px;
 }

@@ -1,10 +1,10 @@
 export const Nav = () => {
     return (
         <nav>
-            <img class="logo" src="/image/logo.svg" alt="Logo Kasa"/>
+            <img className="logo" src="/image/logo.svg" alt="Logo Kasa"/>
             <ul>
-                <li><a class="navlink" href>Accueil</a></li>
-                <li><a class="navlink" href>A Propos</a></li>
+                <li><a href="/" className="navlink">Accueil</a></li>
+                <li><a href="about" className="navlink">A Propos</a></li>
             </ul>
         </nav>
     );

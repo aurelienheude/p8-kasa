@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-html, body, ul, p, h1, h2 {
+html,
+body,
+ul,
+p,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -12,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2, .text, p, span, a {
+* {
   font-family: Montserrat;
 }
 
@@ -20,55 +26,301 @@ h1 {
   font-size: 48px;
   font-weight: 500;
   line-height: 68px;
-  letter-spacing: 0em;
 }
 
 h2 {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
-  letter-spacing: 0em;
+}
+
+.bannerImgTitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.errorTitle {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 136px;
+  text-align: center;
+}
+
+.navlink {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.errorLink {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
 }
 
 .text {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 34px;
-  letter-spacing: 0em;
+  line-height: 26px;
+  text-align: center;
 }
 
-.root {
+.smallText {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.tagText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
+.smallTextDropdown {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+
+.smallTextTag {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+#app {
   display: grid;
-  grid-template-columns: 1fr 1240px 1fr;
+  grid-template-columns: minmax(20px, 1fr) minmax(1px, 1240px) minmax(20px, 1fr);
   grid-template-rows: auto;
+  row-gap: 20px;
+}
+
+.gridThumb {
+  grid-column: 2/3;
+  grid-row: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  row-gap: 20px;
 }
 
 nav {
+  grid-row: 1;
+  grid-column: 2/3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+nav .logo {
+  max-height: 46px;
+  max-width: auto;
 }
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav ul li {
   display: flex;
+  flex-direction: row;
+  gap: 26px;
+}
+nav ul li .navlink {
+  text-transform: uppercase;
+  color: #000000;
 }
 
-header {
-  grid-row: 2;
-  grid-template-columns: 2/3;
+.bannerImg {
+  position: relative;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 111px;
+  width: 100%;
+  border-radius: 10px;
+  background-image: url("../../../public/image/WallpaperCliff.png");
+  background-position: center;
+}
+.bannerImg__About {
+  background-image: url("../../../public/image/wallpaperMountain.png");
+  background-position: center;
+  background-size: cover;
+}
+.bannerImg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.3;
+  border-radius: 10px;
+}
+.bannerImg .bannerImgTitle {
+  z-index: 2;
+  padding-left: 16px;
+  max-width: 217px;
+  color: rgb(255, 255, 255);
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100%;
+  border-radius: 5px;
+}
+.dropdown__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgb(255, 96, 96);
+  color: rgb(255, 255, 255);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 100vh;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    max-height: 100vh;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+.dropdown__active {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  background: rgba(246, 246, 246, 0.4509803922);
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in forwards;
+}
+.dropdown .toggleButton {
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.dropdown .toggleButton__active {
+  transform: rotate(180deg);
+}
+
+.apartmentTag {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 84px;
+  background: rgb(255, 96, 96);
+}
+
+.cardhome {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 255px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgb(255, 96, 96);
+}
+.cardhome .text {
+  z-index: 3;
+  padding: 0px 20px 15px 20px;
+  align-self: flex-end;
+  text-align: left;
+  color: rgb(255, 255, 255);
+}
+.cardhome img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+.cardhome::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.8) 90%, rgb(0, 0, 0) 100%);
+  opacity: 0.3;
+  z-index: 2;
+  border-radius: 10px;
 }
 
 footer {
+  grid-row: auto;
+  grid-column: 1/4;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: rgb(255, 96, 96);
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 66px;
+  padding-bottom: 58px;
+  background: #000000;
+}
+footer img {
+  width: auto;
+  height: 39px;
+}
+footer p {
+  max-width: 145px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.apartmentContent {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.aboutContent {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.errorContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 113px;
+  padding: 90px 0px;
+}
+.errorContent .text {
+  width: 219px;
+  color: #000000;
+}
+.errorContent .errorTitle {
+  color: rgb(255, 96, 96);
+}
+.errorContent .errorLink {
+  text-decoration: underline;
+  color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */

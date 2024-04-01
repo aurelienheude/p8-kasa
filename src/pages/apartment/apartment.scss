@@ -1,0 +1,45 @@
+@use "../../styles/variables"as *;
+
+.apartmentContent {
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    .apartmentContent__primaryInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .apartmentTitle {
+        color: $primaryColor;
+    }
+
+    .apartmentLocation {
+        color: $black;
+    }
+
+    .apartmentContent__avatarAndRating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        flex-direction: row;
+
+        padding-top: 3px;
+    }
+
+    .apartmentContent__dropdownSection {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+}

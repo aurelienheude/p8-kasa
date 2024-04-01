@@ -6,19 +6,9 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "README.md": true,
-        ".gitignore": true,
-        "public/robots.txt": true,
-        ".vscode": true,
-        "package-lock.json": true,
-        "package.json": true
+        ".vscode": true
     },
     "hide-files.files": [
-        "README.md",
-        ".gitignore",
-        "public/robots.txt",
-        ".vscode",
-        "package-lock.json",
-        "package.json"
+        ".vscode"
     ]
 }

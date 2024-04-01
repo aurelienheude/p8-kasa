@@ -1,6 +1,6 @@
-@use "../../../styles/variables" as *;
+@use "../../../styles/variables"as *;
 
-nav{
+nav {
     grid-row: 1;
     grid-column: 2/3;
 
@@ -8,22 +8,23 @@ nav{
     justify-content: space-between;
     align-items: center;
 
+    height: fit-content;
     padding-top: 20px;
 
-    .logo{
+    .logo {
         max-height: 46px;
         max-width: auto;
     }
 
-    ul{
+    ul {
         display: flex;
         flex-direction: row;
 
         gap: 26px;
 
-        li .navlink{
+        li .navlink {
             text-transform: uppercase;
-            color: $primaryColor;
+            color: $black;
         }
     }
 }

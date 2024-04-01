@@ -5,3 +5,7 @@ export const Banner = () => {
         </div>
     );
 }
+
+export const BannerWithoutTitle = () => {
+    return ( <div className="bannerImg bannerImg__About"></div> );
+}

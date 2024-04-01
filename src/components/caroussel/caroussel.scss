@@ -1,0 +1,19 @@
+.caroussel{
+    position: relative;
+
+    height: 255px;
+    width: 100%;
+
+    box-sizing: border-box;
+    
+    border-radius: 10px;
+
+    &__cover{
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+    }
+}
