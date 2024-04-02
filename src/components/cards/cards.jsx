@@ -3,10 +3,10 @@ import data from "../../logements.json";
 
 const Card = ({id, title, cover }) => {
     return (
-        <a href={'/apartment/' + id} className="cardhome">
+        <link href={'/apartment/' + id} className="cardhome">
             <p className="text">{title}</p>
             <img src={cover} alt="" ></img>
-        </a>
+        </link>
     );
 };
 
