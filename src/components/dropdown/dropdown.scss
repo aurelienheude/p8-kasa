@@ -29,6 +29,26 @@
         color: $white;
     }
 
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        box-sizing: border-box;
+        
+        gap: 2px;
+
+        width: 100%;
+
+        padding: 10px;
+        
+        .dropdown__active{
+            padding: 0px;
+            background: none;
+        }
+    }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -66,7 +86,7 @@
         animation: fadeIn 0.4s ease-in forwards;
     }
 
-    &__test{
+    &__test {
         height: 300px;
     }
 

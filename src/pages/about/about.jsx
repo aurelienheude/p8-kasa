@@ -7,10 +7,10 @@ export const About = () => {
   return (
     <>
       <Nav activeClassName="activeLink" />
-      <BannerWithoutTitle />
-        <ul className="aboutContent">
+        <div className="aboutContent">
+          <BannerWithoutTitle />
           <DropdownAboutList />
-        </ul>
+        </div>
       <Footer />
     </>
   );

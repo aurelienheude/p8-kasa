@@ -5,7 +5,7 @@ import { useParams, Navigate } from "react-router-dom";
 import data from "../../logements.json";
 import { Caroussel } from "../../components/caroussel/caroussel.jsx";
 import { UserProfile } from "../../components/avatar/avatar.jsx";
-import { Dropdown } from "../../components/dropdown/dropdown.jsx";
+import { Dropdown, DropdownList } from "../../components/dropdown/dropdown.jsx";
 import { Rating } from "../../components/rating/rating.jsx";
 
 const checkApartmentExistence = (id) => {
@@ -24,10 +24,10 @@ export const Apartment = () => {
     <>
       <Nav />
       <div className="apartmentContent">
-        <Caroussel cover={apartment.cover} />
+        <Caroussel picture={apartment.pictures} />
         <div className="apartmentContent__primaryInfo">
           <h1 className="apartmentTitle">{apartment.title}</h1>
-          <p className="">{apartment.location}</p>
+          <p className="apartmentLocation">{apartment.location}</p>
         </div>
 
         <Tag tags={apartment.tags} />
@@ -37,7 +37,7 @@ export const Apartment = () => {
         </div>
         <div className="apartmentContent__dropdownSection">
           <Dropdown dropdownTitle="Description" dropdownActiveDescription={apartment.description} />
-          <Dropdown dropdownTitle="Équipements" dropdownActiveDescription={apartment.equipments} />
+          <DropdownList dropdownTitle="Équipements" dropdownActiveDescription={apartment.equipments} />
         </div>
       </div>
       <Footer />

@@ -3,11 +3,12 @@
 .userProfile {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     gap: 10px;
     &__name {
         color: $primaryColor;
-        white-space: pre-wrap;
+        max-width: 80px;
     }
 
     &__picture {
