@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/p8-kasa/static/css/main.89d678a8.css",
+    "main.js": "/p8-kasa/static/js/main.f85b8bfd.js",
+    "static/media/wallpaperMountain.png": "/p8-kasa/static/media/wallpaperMountain.388a325a41a4341c7ba0.png",
+    "static/media/WallpaperCliff.png": "/p8-kasa/static/media/WallpaperCliff.7b295fcb71808167cd75.png",
+    "index.html": "/p8-kasa/index.html",
+    "main.89d678a8.css.map": "/p8-kasa/static/css/main.89d678a8.css.map",
+    "main.f85b8bfd.js.map": "/p8-kasa/static/js/main.f85b8bfd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89d678a8.css",
+    "static/js/main.f85b8bfd.js"
+  ]
+}
