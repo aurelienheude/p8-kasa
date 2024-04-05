@@ -4,16 +4,12 @@
     row-gap: 20px;
 
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
 
-.gridThumb {
-    grid-column: 2/3;
-    grid-row: auto;
+    @media screen and (min-width: 768px) {
+        grid-template-columns: minmax(40px, 1fr) minmax(1px, 1240px) minmax(40px, 1fr);
+    }
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    
-    row-gap: 20px;
+    @media screen and (min-width: 1024px) {
+        row-gap: 50px;
+    }
 }

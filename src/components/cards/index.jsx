@@ -1,12 +1,13 @@
 import React from "react";
 import data from "../../logements.json";
+import { Link } from "react-router-dom";
 
 const Card = ({id, title, cover }) => {
     return (
-        <link href={'/apartment/' + id} className="cardhome">
+        <Link to={'/apartment/' + id} className="cardhome">
             <p className="text">{title}</p>
             <img src={cover} alt="" ></img>
-        </link>
+        </Link>
     );
 };
 

@@ -1,23 +1,27 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './styles/style.scss';
-import { Navigate, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/home/home';
-import About from './pages/about/about';
-import Error from './pages/error/error';
-import Apartment from './pages/apartment/apartment';
+
+import Home from './pages/home';
+import About from './pages/about';
+import Error from './pages/error';
+import Apartment from './pages/apartment';
+
+import { LayoutContent } from './layouts/link';
 
 const root = createRoot(document.getElementById('app'));
 
 root.render(
     <React.StrictMode>
-        <Router>
+        <Router basename='/p8-kasa'>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="*" element={<Navigate to="/404" />} />
-                <Route path="/404" element={<Error />} />
-                <Route path="/apartment/:id" element={<Apartment />} />
+                <Route path="/" element={<LayoutContent><Home /></LayoutContent>} />
+                <Route path="/about" element={<LayoutContent><About /></LayoutContent>} />
+                <Route path="/apartment/:id" element={<LayoutContent><Apartment /></LayoutContent>} />
+                <Route path="*" element={<LayoutContent><Error /></LayoutContent>} />
+                <Route path="/404" element={<LayoutContent><Error /></LayoutContent>} />
             </Routes>
         </Router>
     </React.StrictMode>

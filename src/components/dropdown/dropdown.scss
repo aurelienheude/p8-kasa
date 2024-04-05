@@ -2,13 +2,10 @@
 
 .dropdown {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     flex-direction: column;
-
-    min-width: 100%;
-
+    
+    width: 100%;
+    
     border-radius: 5px;
 
     &__title {
@@ -27,67 +24,63 @@
 
         background: $primaryColor;
         color: $white;
+
+        @media screen and (min-width: 768px) {
+            height: fit-content;
+            padding: 9px 15px;
+            border-radius: 10px;
+        }
     }
 
-    &__list {
+    &__content {
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
         flex-direction: column;
+        flex-basis: auto;
 
-        box-sizing: border-box;
-        
         gap: 2px;
 
-        width: 100%;
-
-        padding: 10px;
-        
-        .dropdown__active{
-            padding: 0px;
-            background: none;
-        }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            max-height: 0;
-        }
-
-        to {
-            opacity: 1;
-            max-height: 100vh;
-        }
-    }
-
-    @keyframes fadeOut {
-        from {
-            opacity: 1;
-            max-height: 100vh;
-        }
-
-        to {
-            opacity: 0;
-            max-height: 0;
-        }
-    }
-
-    &__active {
-        display: flex;
-
         box-sizing: border-box;
 
+        max-height: 0px;
         width: 100%;
-        padding: 10px;
 
+        padding: 0px 10px 0px 10px;
+
+        overflow: hidden;
         background: $grey;
-        opacity: 0;
-        animation: fadeIn 0.4s ease-in forwards;
-    }
+        transition: max-height 0.5s ease-in-out;
+        
+        @media screen and (min-width: 768px) {
+            padding: 0px 28px 0px 20px;
+        }
 
-    &__test {
-        height: 300px;
+        &-active {
+            max-height: 100vh;
+        }
+
+        &::before{
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+
+            @media screen and (min-width: 768px) {
+                height: 25px;
+            }
+        }
+
+        &::after{
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+
+            @media screen and (min-width: 768px) {
+                height: 20px;
+            }
+        }
     }
 
     .toggleButton {
@@ -97,6 +90,11 @@
 
         &__active {
             transform: rotate(180deg);
+        }
+
+        @media screen and (min-width: 768px) {
+            height: 32px;
+            width: 32px;
         }
     }
 }

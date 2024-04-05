@@ -2,6 +2,7 @@
 @use "font";
 @use "grid";
 
+@use "../components/404/error404.scss";
 @use "../components/layouts/nav/nav.scss";
 @use "../components/banner/banner.scss";
 @use "../components/dropdown/dropdown.scss";
@@ -10,8 +11,9 @@
 @use "../components/cards/cards.scss";
 @use "../components/layouts/footer/footer.scss";
 @use "../components/avatar/avatar.scss";
+@use "../components/rating/rating.scss";
 
 @use "../pages/apartment/apartment.scss";
 @use "../pages/about/about.scss";
 @use "../pages/home/home.scss";
-@use "../pages//error/error.scss";
+@use "../pages/error/error.scss";

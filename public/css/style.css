@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-html,
-body,
-ul,
-p,
-h1,
-h2 {
+html, body {
+  min-height: 100vh;
+}
+
+html, body, ul, p, h1, h2 {
   margin: 0;
   padding: 0;
 }
@@ -36,16 +35,95 @@ h2 {
 
 .bannerImgTitle {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 24px;
   text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .bannerImgTitle {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 68.45px;
+    text-align: center;
+  }
+}
+
+.userProfile__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .userProfile__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+}
+
+.apartmentLocation {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .apartmentLocation {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+}
+
+.apartmentTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .apartmentTitle {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 36px;
+  }
 }
 
 .errorTitle {
   font-size: 96px;
   font-weight: 700;
-  line-height: 136px;
+  line-height: 96px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .errorTitle {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .errorTitle {
+    font-size: 288px;
+    font-weight: 700;
+    line-height: 288px;
+  }
+}
+
+.errorSubText {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .errorSubText {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+  }
 }
 
 .navlink {
@@ -53,11 +131,40 @@ h2 {
   font-weight: 500;
   line-height: 17px;
 }
+@media screen and (min-width: 768px) {
+  .navlink {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navlink {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+  }
+}
 
 .errorLink {
   font-size: 14px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 19.96px;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1024px) {
+  .errorLink {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+}
+
+.footerText {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
 }
 
 .text {
@@ -67,47 +174,95 @@ h2 {
   text-align: center;
 }
 
-.smallText {
+.apartmentTagList__text {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14.26px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .apartmentTagList__text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.96px;
+  }
+}
+
+.dropdown__title {
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
 }
-
-.tagText {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .dropdown__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.22px;
+  }
 }
 
-.smallTextDropdown {
+.apartmentDropdownTitle {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.54px;
+}
+@media screen and (min-width: 768px) {
+  .apartmentDropdownTitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.67px;
+  }
+}
+
+.dropdown__content {
   font-size: 12px;
   font-weight: 400;
-  line-height: 17px;
-  text-align: left;
+  line-height: 17.11px;
 }
-
-.smallTextTag {
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 14px;
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .dropdown__content {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.67px;
+  }
 }
 
 #app {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(1px, 1240px) minmax(20px, 1fr);
-  grid-template-rows: auto;
   row-gap: 20px;
+  grid-template-rows: auto 1fr auto;
+}
+@media screen and (min-width: 768px) {
+  #app {
+    grid-template-columns: minmax(40px, 1fr) minmax(1px, 1240px) minmax(40px, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  #app {
+    row-gap: 50px;
+  }
 }
 
-.gridThumb {
+.errorContent {
   grid-column: 2/3;
   grid-row: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto;
-  row-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 113px;
+  width: 100%;
+}
+.errorContent .errorTitle {
+  color: rgb(255, 96, 96);
+}
+.errorContent .errorSubText {
+  max-width: 260px;
+  color: rgb(255, 96, 96);
+}
+.errorContent .errorLink {
+  color: rgb(255, 96, 96);
 }
 
 nav {
@@ -116,20 +271,51 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: fit-content;
   padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  nav {
+    padding-top: 45px;
+  }
 }
 nav .logo {
   max-height: 46px;
   max-width: auto;
+}
+@media screen and (min-width: 768px) {
+  nav .logo {
+    max-height: 68px;
+  }
 }
 nav ul {
   display: flex;
   flex-direction: row;
   gap: 26px;
 }
+@media screen and (min-width: 768px) {
+  nav ul {
+    gap: 57px;
+  }
+}
 nav ul li .navlink {
+  position: relative;
   text-transform: uppercase;
   color: #000000;
+}
+@media screen and (min-width: 768px) {
+  nav ul li .navlink {
+    text-transform: none;
+  }
+}
+nav ul li .navlink-active::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000000;
 }
 
 .bannerImg {
@@ -144,6 +330,11 @@ nav ul li .navlink {
   border-radius: 10px;
   background-image: url("../../../public/image/WallpaperCliff.png");
   background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .bannerImg {
+    justify-content: center;
+  }
 }
 .bannerImg__About {
   background-image: url("../../../public/image/wallpaperMountain.png");
@@ -162,16 +353,29 @@ nav ul li .navlink {
 .bannerImg .bannerImgTitle {
   z-index: 2;
   padding-left: 16px;
-  max-width: 217px;
+  max-width: 240px;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .bannerImg .bannerImgTitle {
+    max-width: inherit;
+    padding-left: inherit;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bannerImg {
+    height: 223px;
+    border-radius: 25px;
+  }
+  .bannerImg::after {
+    border-radius: 25px;
+  }
 }
 
 .dropdown {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  min-width: 100%;
+  width: 100%;
   border-radius: 5px;
 }
 .dropdown__title {
@@ -186,34 +390,57 @@ nav ul li .navlink {
   background: rgb(255, 96, 96);
   color: rgb(255, 255, 255);
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 100vh;
+@media screen and (min-width: 768px) {
+  .dropdown__title {
+    height: fit-content;
+    padding: 9px 15px;
+    border-radius: 10px;
   }
 }
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    max-height: 100vh;
-  }
-  to {
-    opacity: 0;
-    max-height: 0;
-  }
-}
-.dropdown__active {
+.dropdown__content {
   display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  gap: 2px;
   box-sizing: border-box;
+  max-height: 0px;
   width: 100%;
-  padding: 10px;
-  background: rgba(246, 246, 246, 0.4509803922);
-  opacity: 0;
-  animation: fadeIn 0.4s ease-in forwards;
+  padding: 0px 10px 0px 10px;
+  overflow: hidden;
+  background: #F6F6F6;
+  transition: max-height 0.5s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__content {
+    padding: 0px 28px 0px 20px;
+  }
+}
+.dropdown__content-active {
+  max-height: 100vh;
+}
+.dropdown__content::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__content::before {
+    height: 25px;
+  }
+}
+.dropdown__content::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__content::after {
+    height: 20px;
+  }
 }
 .dropdown .toggleButton {
   transform: rotate(0deg);
@@ -223,23 +450,107 @@ nav ul li .navlink {
 .dropdown .toggleButton__active {
   transform: rotate(180deg);
 }
+@media screen and (min-width: 768px) {
+  .dropdown .toggleButton {
+    height: 32px;
+    width: 32px;
+  }
+}
 
-.apartmentTag {
+.caroussel {
+  position: relative;
+  display: flex;
+  min-height: 255px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .caroussel {
+    min-height: 315px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .caroussel {
+    min-height: 415px;
+  }
+}
+.caroussel svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .caroussel svg {
+    height: 119px;
+    width: 96px;
+    top: 35%;
+  }
+}
+.caroussel__arrowRight {
+  right: 0;
+  top: 45%;
+}
+.caroussel__arrowLeft {
+  left: 0;
+  top: 45%;
+}
+.caroussel__cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.apartmentTagList {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .apartmentTagList {
+    padding-top: 18px;
+  }
+}
+.apartmentTagList__text {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 84px;
+  padding: 3px 10px;
+  border-radius: 10px;
   background: rgb(255, 96, 96);
+  color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .apartmentTagList__text {
+    padding: 4px 10px;
+  }
 }
 
 .cardhome {
   position: relative;
   display: flex;
-  width: 100%;
+  flex: 1 0 255px;
   height: 255px;
   box-sizing: border-box;
   border-radius: 10px;
+  overflow: hidden;
   background: rgb(255, 96, 96);
+}
+@media screen and (min-width: 768px) {
+  .cardhome {
+    height: 340px;
+    flex: 1 0 340px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardhome {
+    flex: 0 0 calc(33.333% - 20px);
+  }
 }
 .cardhome .text {
   z-index: 3;
@@ -250,10 +561,12 @@ nav ul li .navlink {
 }
 .cardhome img {
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s;
 }
 .cardhome::after {
   content: "";
@@ -267,6 +580,9 @@ nav ul li .navlink {
   z-index: 2;
   border-radius: 10px;
 }
+.cardhome:hover img {
+  transform: scale(1.04);
+}
 
 footer {
   grid-row: auto;
@@ -276,35 +592,182 @@ footer {
   justify-content: flex-end;
   flex-direction: column;
   gap: 18px;
+  bottom: 0;
   padding-top: 66px;
   padding-bottom: 58px;
   background: #000000;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    gap: 29px;
+  }
 }
 footer img {
   width: auto;
   height: 39px;
 }
-footer p {
+footer .footerText {
   max-width: 145px;
   text-align: center;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  footer .footerText {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    max-width: inherit;
+  }
+}
+
+.userProfile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.userProfile__name {
+  color: rgb(255, 96, 96);
+  max-width: 80px;
+}
+.userProfile__picture {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .userProfile__picture {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+.rating {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .rating svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .apartmentContent {
   grid-row: 2/3;
   grid-column: 2/3;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .apartmentContent {
+    flex-flow: row wrap;
+  }
+}
+.apartmentContent .apartmentTitle {
+  color: rgb(255, 96, 96);
+}
+.apartmentContent .apartmentLocation {
+  color: #000000;
+}
+.apartmentContent__primaryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .apartmentContent__primaryInfo {
+    width: fit-content;
+    padding-top: 26px;
+  }
+}
+.apartmentContent__avatarAndRating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 6px;
+}
+@media screen and (min-width: 1024px) {
+  .apartmentContent__avatarAndRating {
+    flex-direction: column-reverse;
+    flex: 1;
+    align-items: flex-end;
+    padding-top: 26px;
+  }
+}
+.apartmentContent__dropdownSection {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  gap: 20px;
+  padding-top: 3px;
+}
+@media screen and (min-width: 768px) {
+  .apartmentContent__dropdownSection {
+    flex-direction: row;
+    gap: 76px;
+    padding-top: 18px;
+  }
 }
 
 .aboutContent {
-  grid-row: 3/4;
+  grid-row: 2/3;
   grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .aboutContent {
+    gap: 38px;
+  }
+}
+.aboutContent__groupCollapse {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .aboutContent__groupCollapse {
+    max-width: 1023px;
+    gap: 30px;
+  }
+}
+
+.thumbContent {
+  grid-column: 2/3;
+  grid-row: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .thumbContent {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .thumbContent {
+    padding: 56px 50px;
+    background: #F6F6F6;
+    border-radius: 25px;
+  }
+}
 
 .errorContent {
+  grid-row: 2/3;
+  grid-column: 2/3;
   display: flex;
   align-items: center;
   flex-direction: column;

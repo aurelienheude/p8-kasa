@@ -4,7 +4,7 @@ export const Tag = ({ tags }) => {
             {
                 tags.map((tag, index) => 
                 (
-                    <p className="apartmentTag smallTextTag" key={index}>{tag}</p>
+                    <p className="apartmentTagList__text" key={index}>{tag}</p>
                 ))
             }
         </div>

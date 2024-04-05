@@ -18,51 +18,129 @@ h2 {
 
 .bannerImgTitle {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 24px;
-
     text-align: left;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 68.45px;
+        text-align: center;
+    }
 }
 
-.userProfile__name{
+.userProfile__name {
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
     text-align: right;
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+    }
 }
 
-.apartmentLocation{
+.apartmentLocation {
     font-size: 14px;
     font-weight: 500;
     line-height: 19px;
     text-align: left;
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+    }
 }
 
-.apartmentTitle{
+.apartmentTitle {
     font-size: 18px;
     font-weight: 500;
-    line-height: 25.67px;
+    line-height: 18px;
     text-align: left;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 36px;
+    }
 }
 
 .errorTitle {
     font-size: 96px;
     font-weight: 700;
-    line-height: 136px;
+    line-height: 96px;
 
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 120px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 288px;
+        font-weight: 700;
+        line-height: 288px;
+    }
+}
+
+.errorSubText {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: center;
+
+    @media screen and (min-width: 1024px) {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51.34px;
+    }
 }
 
 .navlink {
     font-size: 12px;
     font-weight: 500;
     line-height: 17px;
+
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+    }
+
 }
 
 .errorLink {
     font-size: 14px;
     font-weight: 500;
-    line-height: 19px;
+    line-height: 19.96px;
+    text-decoration: underline;
+    
+    @media screen and (min-width: 1024px) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+    }
+}
+
+.footerText {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
 }
 
 .text {
@@ -73,30 +151,51 @@ h2 {
     text-align: center;
 }
 
-.smallText {
+.apartmentTagList__text {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14.26px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.96px;
+    }
+}
+
+.dropdown__title {
     font-size: 13px;
     font-weight: 700;
     line-height: 18px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34.22px;
+    }
 }
 
-.tagText {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
+.apartmentDropdownTitle {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18.54px;
 
-    text-align: center;
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.67px;
+    }
 }
 
-.smallTextDropdown{
+.dropdown__content {
     font-size: 12px;
     font-weight: 400;
-    line-height: 17px;
-    text-align: left;
-}
+    line-height: 17.11px;
 
-.smallTextTag{
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 14px;
-    text-align: center;
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.67px;
+    }
 }

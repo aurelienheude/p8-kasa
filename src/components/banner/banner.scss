@@ -17,12 +17,16 @@
     background-image: url("../../../public/image/WallpaperCliff.png");
     background-position: center;
 
-    &__About{
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+
+    &__About {
         background-image: url("../../../public/image/wallpaperMountain.png");
         background-position: center;
         background-size: cover;
     }
-    
+
     &::after {
         content: "";
         position: absolute;
@@ -37,8 +41,22 @@
         z-index: 2;
 
         padding-left: 16px;
-        max-width: 217px;
+        max-width: 240px;
 
         color: $white;
+
+        @media screen and (min-width: 768px) {
+            max-width: inherit;
+            padding-left: inherit;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 223px;
+        border-radius: 25px;
+
+        &::after {
+            border-radius: 25px;
+        }
     }
 }

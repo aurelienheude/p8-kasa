@@ -1,6 +1,6 @@
-@use "../../styles/variables"as *;
-
 .errorContent {
+    grid-row: 2/3;
+    grid-column: 2/3;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,19 +8,4 @@
     gap: 113px;
 
     padding: 90px 0px;
-
-    .text {
-        width: 219px;
-
-        color: $black;
-    }
-
-    .errorTitle {
-        color: $primaryColor;
-    }
-
-    .errorLink {
-        text-decoration: underline;
-        color: $black;
-    }
 }

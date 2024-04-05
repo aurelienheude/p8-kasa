@@ -1,16 +1,15 @@
 import React from "react";
 
 export const Rating = ({ actualRating }) => {
-    // Création d'un tableau de base de 5 étoiles
+
     const baseStars = [1, 2, 3, 4, 5];
 
-    // Fonction pour déterminer la couleur de chaque étoile en fonction du rating
     const getStarColor = (index) => {
         if (index <= actualRating) {
-            // Si l'index de l'étoile est inférieur ou égal au rating actuel, alors c'est une étoile rouge
+
             return "#FF6060"; // Rouge
         } else {
-            // Sinon, c'est une étoile grise
+
             return "#E3E3E3"; // Gris
         }
     };

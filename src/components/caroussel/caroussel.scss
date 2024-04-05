@@ -1,29 +1,46 @@
-.caroussel{
+.caroussel {
     position: relative;
-    height: 255px;
+    display: flex;
+    min-height: 255px;
     width: 100%;
 
     box-sizing: border-box;
-    
+
     border-radius: 10px;
 
-    svg{
+    @media screen and (min-width: 768px) {
+        min-height: 315px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        min-height: 415px;
+    }
+
+    svg {
         position: absolute;
         width: 24px;
         height: 24px;
+        cursor: pointer;
+
+        @media screen and (min-width: 768px) {
+            height: 119px;
+            width: 96px;
+
+            top: 35%;
+        }
     }
 
-    &__arrowRight{
+    &__arrowRight {
         right: 0;
         top: 45%;
     }
 
-    &__arrowLeft{
+    &__arrowLeft {
         left: 0;
         top: 45%;
     }
 
-    &__cover{
+    &__cover {
         position: absolute;
 
         width: 100%;

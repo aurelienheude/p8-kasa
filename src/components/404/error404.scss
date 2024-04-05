@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.errorContent{
+    grid-column: 2/3;
+    grid-row: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    
+    gap: 113px;
+    width: 100%;
+
+    .errorTitle{
+        color: $primaryColor;
+    }
+
+    .errorSubText{
+        max-width: 260px;
+        color: $primaryColor;
+
+        @media screen and (min-width: 768px) {
+            max-width: fit-content;
+        }
+    }
+
+    .errorLink{
+        color: $black;
+    }
+}
