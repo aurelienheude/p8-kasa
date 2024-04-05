@@ -35,9 +35,17 @@ h2 {
 
 .bannerImgTitle {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 24px;
   text-align: left;
+}
+@media screen and (min-width: 1024px) {
+  .bannerImgTitle {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 68.45px;
+    text-align: center;
+  }
 }
 
 .userProfile__name {
@@ -46,6 +54,13 @@ h2 {
   line-height: 17px;
   text-align: right;
 }
+@media screen and (min-width: 768px) {
+  .userProfile__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+}
 
 .apartmentLocation {
   font-size: 14px;
@@ -53,12 +68,26 @@ h2 {
   line-height: 19px;
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  .apartmentLocation {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+  }
+}
 
 .apartmentTitle {
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
   text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .apartmentTitle {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+  }
 }
 
 .errorTitle {
@@ -73,11 +102,32 @@ h2 {
   font-weight: 500;
   line-height: 17px;
 }
+@media screen and (min-width: 768px) {
+  .navlink {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navlink {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+  }
+}
 
 .errorLink {
   font-size: 14px;
   font-weight: 500;
   line-height: 19px;
+}
+
+.footerText {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
 }
 
 .text {
@@ -87,12 +137,6 @@ h2 {
   text-align: center;
 }
 
-.smallText {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 18px;
-}
-
 .tagText {
   font-size: 14px;
   font-weight: 500;
@@ -100,11 +144,45 @@ h2 {
   text-align: center;
 }
 
-.smallTextDropdown {
+.dropdown__title {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.22px;
+  }
+}
+
+.apartmentDropdownTitle {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.54px;
+}
+@media screen and (min-width: 768px) {
+  .apartmentDropdownTitle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.67px;
+  }
+}
+
+.dropdown__active,
+.dropdown__list {
   font-size: 12px;
   font-weight: 400;
-  line-height: 17px;
-  text-align: left;
+  line-height: 17.11px;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__active,
+  .dropdown__list {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.67px;
+  }
 }
 
 .smallTextTag {
@@ -121,14 +199,15 @@ h2 {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-
-.gridThumb {
-  grid-column: 2/3;
-  grid-row: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto;
-  row-gap: 20px;
+@media screen and (min-width: 768px) {
+  #app {
+    grid-template-columns: minmax(40px, 1fr) minmax(1px, 1240px) minmax(40px, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  #app {
+    row-gap: 50px;
+  }
 }
 
 nav {
@@ -140,19 +219,39 @@ nav {
   height: fit-content;
   padding-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  nav {
+    padding-top: 45px;
+  }
+}
 nav .logo {
   max-height: 46px;
   max-width: auto;
+}
+@media screen and (min-width: 768px) {
+  nav .logo {
+    max-height: 68px;
+  }
 }
 nav ul {
   display: flex;
   flex-direction: row;
   gap: 26px;
 }
+@media screen and (min-width: 768px) {
+  nav ul {
+    gap: 57px;
+  }
+}
 nav ul li .navlink {
   position: relative;
   text-transform: uppercase;
   color: #000000;
+}
+@media screen and (min-width: 768px) {
+  nav ul li .navlink {
+    text-transform: none;
+  }
 }
 nav ul li .navlink-active::after {
   content: "";
@@ -197,13 +296,23 @@ nav ul li .navlink-active::after {
   max-width: 217px;
   color: rgb(255, 255, 255);
 }
+@media screen and (min-width: 768px) {
+  .bannerImg {
+    height: 223px;
+    border-radius: 25px;
+  }
+  .bannerImg::after {
+    border-radius: 25px;
+  }
+}
 
 .dropdown {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 5px;
 }
 .dropdown__title {
@@ -218,6 +327,12 @@ nav ul li .navlink-active::after {
   background: rgb(255, 96, 96);
   color: rgb(255, 255, 255);
 }
+@media screen and (min-width: 768px) {
+  .dropdown__title {
+    height: fit-content;
+    padding: 9px 15px;
+  }
+}
 .dropdown__list {
   display: flex;
   align-items: flex-start;
@@ -227,6 +342,12 @@ nav ul li .navlink-active::after {
   gap: 2px;
   width: 100%;
   padding: 10px;
+  background: #F6F6F6;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__list {
+    padding: 25px 28px 20px 20px;
+  }
 }
 .dropdown__list .dropdown__active {
   padding: 0px;
@@ -257,9 +378,14 @@ nav ul li .navlink-active::after {
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  background: rgba(246, 246, 246, 0.4509803922);
+  background: #F6F6F6;
   opacity: 0;
   animation: fadeIn 0.4s ease-in forwards;
+}
+@media screen and (min-width: 768px) {
+  .dropdown__active {
+    padding: 25px 28px 20px 20px;
+  }
 }
 .dropdown__test {
   height: 300px;
@@ -272,18 +398,43 @@ nav ul li .navlink-active::after {
 .dropdown .toggleButton__active {
   transform: rotate(180deg);
 }
+@media screen and (min-width: 768px) {
+  .dropdown .toggleButton {
+    height: 32px;
+    width: 32px;
+  }
+}
 
 .caroussel {
   position: relative;
+  display: flex;
   height: 255px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
 }
+@media screen and (min-width: 768px) {
+  .caroussel {
+    height: 315px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .caroussel {
+    height: 415px;
+  }
+}
 .caroussel svg {
   position: absolute;
   width: 24px;
   height: 24px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .caroussel svg {
+    height: 119px;
+    width: 96px;
+    top: 35%;
+  }
 }
 .caroussel__arrowRight {
   right: 0;
@@ -321,11 +472,23 @@ nav ul li .navlink-active::after {
 .cardhome {
   position: relative;
   display: flex;
-  width: 100%;
+  flex: 1 0 255px;
   height: 255px;
   box-sizing: border-box;
   border-radius: 10px;
+  overflow: hidden;
   background: rgb(255, 96, 96);
+}
+@media screen and (min-width: 768px) {
+  .cardhome {
+    height: 340px;
+    flex: 1 0 340px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardhome {
+    flex: 1 0 340px;
+  }
 }
 .cardhome .text {
   z-index: 3;
@@ -336,10 +499,12 @@ nav ul li .navlink-active::after {
 }
 .cardhome img {
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s;
 }
 .cardhome::after {
   content: "";
@@ -352,6 +517,9 @@ nav ul li .navlink-active::after {
   opacity: 0.3;
   z-index: 2;
   border-radius: 10px;
+}
+.cardhome:hover img {
+  transform: scale(1.04);
 }
 
 footer {
@@ -367,14 +535,27 @@ footer {
   padding-bottom: 58px;
   background: #000000;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    gap: 29px;
+  }
+}
 footer img {
   width: auto;
   height: 39px;
 }
-footer p {
+footer .footerText {
   max-width: 145px;
   text-align: center;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  footer .footerText {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    max-width: inherit;
+  }
 }
 
 .userProfile {
@@ -390,7 +571,20 @@ footer p {
 .userProfile__picture {
   width: 32px;
   height: 32px;
+  object-fit: cover;
   border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .userProfile__picture {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  svg {
+    font-size: 16px;
+  }
 }
 
 .apartmentContent {
@@ -430,12 +624,53 @@ footer p {
   grid-row: 2/3;
   grid-column: 2/3;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .aboutContent {
+    gap: 38px;
+  }
+}
+.aboutContent__groupCollapse {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .aboutContent__groupCollapse {
+    max-width: 1023px;
+  }
+}
+
+.thumbContent {
+  grid-column: 2/3;
+  grid-row: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .thumbContent {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .thumbContent {
+    padding: 56px 50px;
+    background: #F6F6F6;
+    border-radius: 25px;
+  }
+}
 
 .errorContent {
+  grid-row: 2/3;
+  grid-column: 2/3;
   display: flex;
   align-items: center;
   flex-direction: column;
