@@ -79,14 +79,14 @@ h2 {
 .apartmentTitle {
   font-size: 18px;
   font-weight: 500;
-  line-height: 25.67px;
+  line-height: 18px;
   text-align: left;
 }
 @media screen and (min-width: 768px) {
   .apartmentTitle {
     font-size: 36px;
     font-weight: 500;
-    line-height: 51.34px;
+    line-height: 36px;
   }
 }
 
@@ -137,11 +137,18 @@ h2 {
   text-align: center;
 }
 
-.tagText {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
+.apartmentTagList__text {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14.26px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .apartmentTagList__text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.96px;
+  }
 }
 
 .dropdown__title {
@@ -170,26 +177,17 @@ h2 {
   }
 }
 
-.dropdown__active,
-.dropdown__list {
+.dropdown__content {
   font-size: 12px;
   font-weight: 400;
   line-height: 17.11px;
 }
 @media screen and (min-width: 768px) {
-  .dropdown__active,
-  .dropdown__list {
+  .dropdown__content {
     font-size: 18px;
     font-weight: 400;
     line-height: 25.67px;
   }
-}
-
-.smallTextTag {
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 14px;
-  text-align: center;
 }
 
 #app {
@@ -197,7 +195,6 @@ h2 {
   grid-template-columns: minmax(20px, 1fr) minmax(1px, 1240px) minmax(20px, 1fr);
   row-gap: 20px;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
 }
 @media screen and (min-width: 768px) {
   #app {
@@ -276,6 +273,11 @@ nav ul li .navlink-active::after {
   background-image: url("../../../public/image/WallpaperCliff.png");
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .bannerImg {
+    justify-content: center;
+  }
+}
 .bannerImg__About {
   background-image: url("../../../public/image/wallpaperMountain.png");
   background-position: center;
@@ -293,8 +295,14 @@ nav ul li .navlink-active::after {
 .bannerImg .bannerImgTitle {
   z-index: 2;
   padding-left: 16px;
-  max-width: 217px;
+  max-width: 240px;
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .bannerImg .bannerImgTitle {
+    max-width: inherit;
+    padding-left: inherit;
+  }
 }
 @media screen and (min-width: 768px) {
   .bannerImg {
@@ -308,11 +316,12 @@ nav ul li .navlink-active::after {
 
 .dropdown {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
   box-sizing: border-box;
+  height: fit-content;
+  width: 100%;
   border-radius: 5px;
 }
 .dropdown__title {
@@ -331,64 +340,28 @@ nav ul li .navlink-active::after {
   .dropdown__title {
     height: fit-content;
     padding: 9px 15px;
+    border-radius: 10px;
   }
 }
-.dropdown__list {
+.dropdown__content {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
+  flex-basis: auto;
   box-sizing: border-box;
+  width: 100%;
   gap: 2px;
-  width: 100%;
   padding: 10px;
   background: #F6F6F6;
 }
 @media screen and (min-width: 768px) {
-  .dropdown__list {
+  .dropdown__content {
     padding: 25px 28px 20px 20px;
   }
 }
-.dropdown__list .dropdown__active {
-  padding: 0px;
-  background: none;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 100vh;
-  }
-}
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    max-height: 100vh;
-  }
-  to {
-    opacity: 0;
-    max-height: 0;
-  }
-}
-.dropdown__active {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-  background: #F6F6F6;
-  opacity: 0;
-  animation: fadeIn 0.4s ease-in forwards;
-}
-@media screen and (min-width: 768px) {
-  .dropdown__active {
-    padding: 25px 28px 20px 20px;
-  }
-}
-.dropdown__test {
-  height: 300px;
+.dropdown__content-active {
+  height: auto;
+  max-height: 9999px;
+  transition: al 0.3s cubic-bezier(0, 1, 0, 1);
 }
 .dropdown .toggleButton {
   transform: rotate(0deg);
@@ -408,19 +381,19 @@ nav ul li .navlink-active::after {
 .caroussel {
   position: relative;
   display: flex;
-  height: 255px;
+  min-height: 255px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
   .caroussel {
-    height: 315px;
+    min-height: 315px;
   }
 }
 @media screen and (min-width: 1024px) {
   .caroussel {
-    height: 415px;
+    min-height: 415px;
   }
 }
 .caroussel svg {
@@ -458,15 +431,25 @@ nav ul li .navlink-active::after {
   flex-flow: row wrap;
   gap: 10px;
 }
-.apartmentTagList .apartmentTag {
+@media screen and (min-width: 768px) {
+  .apartmentTagList {
+    padding-top: 18px;
+  }
+}
+.apartmentTagList__text {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3px 10px;
   min-width: 84px;
-  border-radius: 5px;
+  padding: 3px 10px;
+  border-radius: 10px;
   background: rgb(255, 96, 96);
   color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 768px) {
+  .apartmentTagList__text {
+    padding: 4px 10px;
+  }
 }
 
 .cardhome {
@@ -487,7 +470,7 @@ nav ul li .navlink-active::after {
 }
 @media screen and (min-width: 1024px) {
   .cardhome {
-    flex: 1 0 340px;
+    flex: 0 0 calc(33.333% - 20px);
   }
 }
 .cardhome .text {
@@ -530,7 +513,7 @@ footer {
   justify-content: flex-end;
   flex-direction: column;
   gap: 18px;
-  margin-top: auto;
+  bottom: 0;
   padding-top: 66px;
   padding-bottom: 58px;
   background: #000000;
@@ -581,9 +564,14 @@ footer .footerText {
   }
 }
 
+.rating {
+  display: flex;
+  gap: 15px;
+}
 @media screen and (min-width: 768px) {
-  svg {
-    font-size: 16px;
+  .rating svg {
+    width: 24px;
+    height: 24px;
   }
 }
 
@@ -591,15 +579,13 @@ footer .footerText {
   grid-row: 2/3;
   grid-column: 2/3;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 10px;
 }
-.apartmentContent .apartmentContent__primaryInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5px;
+@media screen and (min-width: 1024px) {
+  .apartmentContent {
+    flex-flow: row wrap;
+  }
 }
 .apartmentContent .apartmentTitle {
   color: rgb(255, 96, 96);
@@ -607,17 +593,48 @@ footer .footerText {
 .apartmentContent .apartmentLocation {
   color: #000000;
 }
-.apartmentContent .apartmentContent__avatarAndRating {
+.apartmentContent__primaryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+  .apartmentContent__primaryInfo {
+    width: fit-content;
+    padding-top: 26px;
+  }
+}
+.apartmentContent__avatarAndRating {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding-top: 3px;
+  padding-top: 6px;
 }
-.apartmentContent .apartmentContent__dropdownSection {
+@media screen and (min-width: 1024px) {
+  .apartmentContent__avatarAndRating {
+    flex-direction: column-reverse;
+    flex: 1;
+    align-items: flex-end;
+    padding-top: 26px;
+  }
+}
+.apartmentContent__dropdownSection {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
   gap: 20px;
+  padding-top: 3px;
+}
+@media screen and (min-width: 768px) {
+  .apartmentContent__dropdownSection {
+    flex-direction: row;
+    gap: 76px;
+    padding-top: 18px;
+  }
 }
 
 .aboutContent {
@@ -643,6 +660,7 @@ footer .footerText {
 @media screen and (min-width: 768px) {
   .aboutContent__groupCollapse {
     max-width: 1023px;
+    gap: 30px;
   }
 }
 
