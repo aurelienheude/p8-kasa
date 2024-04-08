@@ -5,6 +5,8 @@
 
     grid-template-rows: auto 1fr auto;
 
+    min-height: 100vh;
+    
     @media screen and (min-width: 768px) {
         grid-template-columns: minmax(40px, 1fr) minmax(1px, 1240px) minmax(40px, 1fr);
     }
